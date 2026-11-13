@@ -1,0 +1,8 @@
+.env
+data/
+test-results/
+references/
+tests/
+.npm-cache/
+dist/
+

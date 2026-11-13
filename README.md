@@ -87,3 +87,4 @@ See [architecture](docs/ARCHITECTURE.md) and [source provenance](docs/SOURCES.md
 ## Repository contents
 
 This repository contains source, tests and setup documentation. Local credentials, databases, encryption keys, backups, generated packages and third-party reference snapshots are excluded. The previous Heroku deployment has been retired; running or hosting this code requires your own setup.
+

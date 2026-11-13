@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24483e"><title>Commerce Hub · Inventory</title>
+  <link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar">
+    <a class="brand" href="#inventory"><span class="brand-mark" aria-hidden="true">c<span>h</span></span><span>Commerce Hub<small>SELLER WORKSPACE</small></span></a>
+    <div class="workspace-label"><span class="workspace-avatar">M</span><span>Main workspace<small id="workspace-mode">Local development</small></span></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <a href="#inventory" data-page="inventory"><span aria-hidden="true">▦</span> Inventory <span class="nav-count" id="nav-count">0</span></a>
+      <a href="#orders" data-page="orders"><span aria-hidden="true">▤</span> Orders</a>
+      <a href="#listings" data-page="listings"><span aria-hidden="true">⊞</span> Listings</a>
+      <a href="#sync" data-page="sync"><span aria-hidden="true">⇄</span> Sync activity <span class="nav-count" id="sync-count">0</span></a>
+      <a href="#performance" data-page="performance"><span aria-hidden="true">▥</span> Performance</a>
+      <a href="#connections" data-page="connections"><span aria-hidden="true">⊙</span> Connections</a>
+      <a href="#security" data-page="security" id="security-nav" hidden><span aria-hidden="true">◇</span> Security</a>
+    </nav>
+    <div class="nav-label channels-label">SALES CHANNELS</div>
+    <a class="channel-nav" href="#connections"><span class="channel-logo amazon">a</span>Amazon<span class="connection-dot" data-connection-dot="amazon"></span></a>
+    <a class="channel-nav" href="#connections"><span class="channel-logo ebay">e</span>eBay<span class="connection-dot" data-connection-dot="ebay"></span></a>
+    <a class="channel-nav" href="#connections"><span class="channel-logo shopify">s</span>Shopify<span class="connection-dot" data-connection-dot="shopify"></span></a>
+    <p class="sidebar-note" id="connection-note">Connect accounts to test API access.<br>Stock sync remains simulated.</p>
+    <div class="sidebar-footer"><span class="avatar">YO</span><span>Your workspace<small>Owner workspace</small></span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span>Workspace <span class="crumb-divider">/</span> <strong id="breadcrumb">Inventory</strong></span><div class="topbar-actions"><span class="local-tag"><span></span><b id="mode-label">Local workspace</b></span><form action="/logout" method="post" id="sign-out-form" hidden><button class="sign-out" type="submit">Sign out</button></form></div></header>
+    <main id="main" tabindex="-1">
+      <div class="notice"><span class="notice-icon" aria-hidden="true">i</span><p><strong>Test connections with confidence.</strong> Account checks are read-only. Stock changes, orders, and listing edits stay in this workspace; synchronization is still simulated.</p></div>
+      <div id="error" class="error" role="alert" hidden></div>
+      <div id="page"><div class="loading">Loading your workspace…</div></div>
+      <section id="editor" class="editor" aria-label="Edit record" hidden></section>
+      <footer class="main-footer"><span>Commerce Hub <span class="footer-dot">·</span> Inventory, in one place.</span><span>USD <span class="footer-dot">·</span> One warehouse</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
+

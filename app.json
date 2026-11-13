@@ -1,0 +1,23 @@
+{
+  "name": "Commerce Hub owner preview",
+  "description": "Password-protected single-owner marketplace connection preview with PostgreSQL persistence.",
+  "stack": "heroku-24",
+  "buildpacks": [{ "url": "heroku/nodejs" }],
+  "env": {
+    "NODE_ENV": { "value": "production" },
+    "COMMERCE_DEPLOYMENT": { "value": "owner-preview" },
+    "APP_ORIGIN": { "description": "Exact HTTPS origin copied from this Heroku app's Settings. No trailing slash." },
+    "OWNER_USER": { "description": "Owner preview login username", "value": "owner" },
+    "OWNER_PASSWORD": { "description": "Private owner preview password, at least 20 characters", "generator": "secret" },
+    "SESSION_SECRET": { "generator": "secret" },
+    "COMMERCE_TOKEN_KEY": { "description": "Stable encryption key: generate 32 random bytes and encode as base64." },
+    "DATABASE_URL": { "description": "Attached PostgreSQL connection URL, supplied by the selected database add-on." },
+    "PGSSL_VERIFY": { "value": "true", "description": "Verify the database TLS certificate. Configure PGSSL_CA if your provider requires a custom CA." },
+    "SHOPIFY_API_VERSION": { "value": "2026-10" },
+    "EBAY_ENVIRONMENT": { "value": "sandbox" },
+    "AMAZON_REGION": { "value": "na" },
+    "AMAZON_MARKETPLACE": { "value": "US" },
+    "AMAZON_DRAFT": { "value": "true" }
+  }
+}
+
